@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 JavaScript</title>
+</head>
+<body>
+
+    <p style="font-size: larger; color: saddlebrown;">Even OR Odd Number</p>
+    <button type="button" onclick=even_odd() value="Submit" style="color: lightgreen; background-color: blue;">Even OR Odd</button>
+    <script>
+        function even_odd(){
+            var num1=27;
+        if(num1%2==0)
+        {
+            document.write(num1+" is even number");
+        }
+        else{
+            document.write(num1+" is odd number");
+        }
+        }
+        
+    </script>
+    <br>
+    <hr>
+    <br>
+    <p style="font-size: larger; color: saddlebrown;">Swap Two values</p>
+    <button type="button" onclick=swap_with_variable() value="Submit" style="color: lightgreen; background-color: blue;">Swap With Variable</button><br><br>
+    <button type="button" onclick=swap_without_variable() value="Submit" style="color: lightgreen; background-color: blue;">Swap Without Variable</button>
+    <script>
+        function swap_with_variable(){
+            document.write("Swap With Variable"+"<br>");
+            var num1="Hello";
+            var num2="Hi";
+            var num3;
+            document.write("num1= " + num1+ "<br>");
+            document.write("num2= " + num2+ "<br>");
+            num3=num1;
+            num1=num2;
+            num2=num3;
+            document.write("After the Swap" +"<br>");
+            document.write("num1= " + num1+ "<br>");
+            document.write("num2= " + num2+ "<br>");
+        
+        }
+        function swap_without_variable(){
+            document.write("Swap Without Variable"+"<br>");
+            var num1=20;
+            var num2=10;
+            document.write("num1= " + num1+ "<br>");
+            document.write("num2= " + num2+ "<br>");
+            num1=num1+num2;
+            num2=num1-num2;
+            num1=num1-num2;
+            document.write("After the Swap" +"<br>");
+            document.write("num1= " + num1+ "<br>");
+            document.write("num2= " + num2+ "<br>");
+        
+        }
+        </script>
+        <br>
+        <hr>
+        <br>
+        <p style="font-size: larger; color: saddlebrown;">Total Marks, Grade, Percentage</p>
+        <button type="button" onclick=Total() value="Submit" style="color: lightgreen; background-color: blue;">Total Marks, Grade, Percentage</button>
+        <script>
+            function Total(){
+                document.write("Total Marks, Grade, Percentage"+"<br>");
+                var marks1=70;
+                var marks2=80;
+                var marks3=93;
+                var marks4=69;
+                var marks5=91;
+                var sum=marks1+marks2+marks3+marks4+marks5;
+                document.write("Total Marks Got :"+ sum+ "<br>");
+                var Percentage=(sum/500)*100;
+                document.write("Percentage Gained :"+ Percentage+ "<br>");
+                if(Percentage>80){
+                    document.write("Grade: A"+ "<br>");
+                }
+                else if((Percentage>60 && Percentage<=80)){
+                    document.write("Grade: B"+ "<br>");
+                }
+                else if((Percentage>45 && Percentage<=60)){
+                    document.write("Grade: C"+ "<br>");
+                }else{
+                    document.write("Fail"+"<br>");
+                }
+            
+            }
+            
+            </script>
+            <br>
+            <hr>
+            <br>
+            <p style="font-size: larger; color: saddlebrown;">Reverse The Number and Find Sum</p>
+            <button type="button" onclick=reverse() value="Submit" style="color: lightgreen; background-color: blue;">Reverse The Number and Find Sum</button>
+            <script>
+                function reverse(){
+                    document.write("Reverse The Number and Find Sum"+"<br>");
+                    var number = 987654
+                    var reverse;
+                    number=number+"";
+                    reverse=number.split("").reverse().join("");
+                    document.write("The Reverse of the number is "+reverse+"<br>");
+                    var sum=0;
+                    reverse1=reverse.split("");
+                    for (const itr of reverse1) {
+                        con=parseInt(itr);
+                        sum=sum+con;
+                        
+                    }
+                    document.write("The Sum of the number is "+sum);
+                
+                }
+                
+                </script>
+                <br>
+                <hr>
+                <br>
+                <p style="font-size: larger; color: saddlebrown;">Factorial</p>
+                <button type="button" onclick=Factorial() value="Submit" style="color: lightgreen; background-color: blue;">Factorial</button>
+                <script>
+                    function Factorial(){
+                        document.write("Factorial of  a number"+"<br>");
+                        var number = 5;
+                        var output= 1;
+                        var i;
+                        if(number==1){
+                            document.write("Factorial of "+ number+ " is : "+output);
+                        }
+                        else{
+                            for( i=2;i<=number;i++)
+                        {
+                            output=output*i;
+                        }
+
+                        document.write("Factorial of "+ number+ " is : "+output);
+                        }
+                        
+                    }
+                    
+                    </script>
+</body>
+</html>
